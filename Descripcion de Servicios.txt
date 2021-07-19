@@ -1,0 +1,112 @@
+Servicios para Crear
+http://localhost:8080/WebApplication1/webresources/cliente/createClientes  POST
+{
+	"nombre": "",
+    	"nit": 
+}
+http://localhost:8080/WebApplication1/webresources/calificacion/createCalificacion  POST
+{
+     	clientes:{"id": },
+     	productos:{"id": },
+     	"calificacion":,
+    	"observacion": ""
+}
+http://localhost:8080/WebApplication1/webresources/compras/createCompras  POST
+{
+     	"productos": {"id":},
+     	"fecha": "",
+     	"cantidad" :
+}
+http://localhost:8080/WebApplication1/webresources/productoVentas/createProductoventas  POST
+{
+     	"productos": {"id":},
+     	"ventas": {"id":},
+     	"monto": ,
+	"iva": ,
+    	"descuento": ,
+	"cantidad":
+}
+http://localhost:8080/WebApplication1/webresources/productos/createProductos  POST
+{
+	"nombre": "",
+     	"precioVenta": ,
+     	"precioCompra": ,
+     	"descripcion": "",
+     	"estado":
+}
+http://localhost:8080/WebApplication1/webresources/ventas/createVentas  POST
+{
+	"clientes": {"id":},
+     	"fecha": "",
+     	"monto":,
+     	"iva":,
+     	"descuento":,
+     	"fechaEntrega":""
+}
+
+
+Servicios Para modificar
+http://localhost:8080/WebApplication1/webresources/cliente/updateClientes  PUT
+{
+	"id": ,
+	"nombre": "",
+    	"nit": 
+}
+http://localhost:8080/WebApplication1/webresources/calificacion/updateCalificacion  PUT
+{
+     	"id": ,
+	"clientes":{"id": },
+     	"productos":{"id": },
+     	"calificacion":,
+    	"observacion": ""
+}
+http://localhost:8080/WebApplication1/webresources/compras/updateCompras  PUT
+{
+	"id":,
+     	"productos": {"id":},
+     	"fecha": "",
+     	"cantidad" :
+}
+http://localhost:8080/WebApplication1/webresources/productoVentas/updateProductoventas  PUT
+{
+	"id": ,
+     	"productos": {"id":},
+     	"ventas": {"id":},
+     	"monto": ,
+	"iva": ,
+    	"descuento": ,
+	"cantidad":
+}
+http://localhost:8080/WebApplication1/webresources/productos/updateProductos  PUT
+{
+	"id": ,
+	"nombre": "",
+     	"precioVenta": ,
+     	"precioCompra": ,
+     	"descripcion": "",
+     	"estado":
+}
+http://localhost:8080/WebApplication1/webresources/ventas/updateVentas  PUT
+{
+	"id": ,
+	"clientes": {"id":},
+     	"fecha": "",
+     	"monto":,
+     	"iva":,
+     	"descuento":,
+     	"fechaEntrega":""
+}
+
+
+
+Optener calificacion de productos por cliente
+http://localhost:8080/WebApplication1/webresources/calificacion/findCalificacionProductos  GET
+
+Obtener Compradores Maximos
+http://localhost:8080/WebApplication1/webresources/cliente/findMaxComprador  GET
+
+Obtener cuantos productos tienen en stock
+http://localhost:8080/WebApplication1/webresources/productoVentas/findProductosStock  GET
+
+Obtener cuantos se han vendido
+http://localhost:8080/WebApplication1/webresources/productoVentas/findProductosVentas  GET

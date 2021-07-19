@@ -25,7 +25,6 @@ public class Productoventas  implements java.io.Serializable {
      private int id;
      private Productos productos;
      private Ventas ventas;
-     private Integer idProducto;
      private Long monto;
      private Long iva;
      private Long descuento;
@@ -45,7 +44,6 @@ public class Productoventas  implements java.io.Serializable {
        this.id = id;
        this.productos = productos;
        this.ventas = ventas;
-       this.idProducto = idProducto;
        this.monto = monto;
        this.iva = iva;
        this.descuento = descuento;
@@ -84,17 +82,6 @@ public class Productoventas  implements java.io.Serializable {
         this.ventas = ventas;
     }
 
-    
-    @Column(name="idProducto")
-    public Integer getIdProducto() {
-        return this.idProducto;
-    }
-    
-    public void setIdProducto(Integer idProducto) {
-        this.idProducto = idProducto;
-    }
-
-    
     @Column(name="monto", precision=11, scale=0)
     public Long getMonto() {
         return this.monto;
