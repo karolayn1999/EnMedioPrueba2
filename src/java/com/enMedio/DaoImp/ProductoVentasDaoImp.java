@@ -22,7 +22,7 @@ import org.hibernate.transform.Transformers;
 public class ProductoVentasDaoImp implements ProductoVentasDao{
 
     @Override
-    public String createCalificacion(Productoventas productoventas) {
+    public String createProductoventas(Productoventas productoventas) {
         Session session = HibernateUtil.getSessionFactory().openSession();
         Transaction transaction = session.beginTransaction();
         try {
@@ -40,7 +40,7 @@ public class ProductoVentasDaoImp implements ProductoVentasDao{
     }
 
     @Override
-    public String updateCalificacion(Productoventas productoventas) {
+    public String updateProductoventas(Productoventas productoventas) {
         Session session = HibernateUtil.getSessionFactory().openSession();
         Transaction transaction = session.beginTransaction();
         try {

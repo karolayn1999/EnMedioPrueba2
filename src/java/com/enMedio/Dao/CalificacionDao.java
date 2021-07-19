@@ -7,6 +7,8 @@ package com.enMedio.Dao;
 
 import com.enMedio.Model.Calificacion;
 import com.enMedio.Model.Productos;
+import com.enMedio.Pojo.CalificacionPojo;
+import java.util.List;
 
 /**
  *
@@ -17,5 +19,7 @@ public interface CalificacionDao {
     public String createCalificacion(Calificacion calificacion);
 
     public String updateCalificacion(Calificacion calificacion);
+
+    public List<CalificacionPojo> findCalificacionProductos();
     
 }

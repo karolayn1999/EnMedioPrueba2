@@ -42,24 +42,24 @@ public class ProductoVentasResource {
      * Retrieves representation of an instance of com.enMedio.Service.ProductoVentasResource
      * @return an instance of java.lang.String
      */
-    @Path("createCalificacion")
+    @Path("createProductoventas")
     @POST
-    public String createCalificacion(
+    public String createProductoventas(
             Productoventas productoventas
             ) throws IOException {
 
         ProductoVentasDao respuesta = new ProductoVentasDaoImp();
-        return respuesta.createCalificacion(productoventas);
+        return respuesta.createProductoventas(productoventas);
     }
     
-    @Path("updateCalificacion")
+    @Path("updateProductoventas")
     @PUT
-    public String updateCalificacion(
+    public String updateProductoventas(
             Productoventas productoventas
             ) throws IOException {
 
         ProductoVentasDao respuesta = new ProductoVentasDaoImp();
-        return respuesta.updateCalificacion(productoventas);
+        return respuesta.updateProductoventas(productoventas);
     }
     
     @Path("findProductosStock")

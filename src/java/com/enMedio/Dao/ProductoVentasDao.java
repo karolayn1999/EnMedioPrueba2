@@ -15,9 +15,9 @@ import java.util.List;
  */
 public interface ProductoVentasDao {
 
-    public String createCalificacion(Productoventas productoventas);
+    public String createProductoventas(Productoventas productoventas);
 
-    public String updateCalificacion(Productoventas productoventas);
+    public String updateProductoventas(Productoventas productoventas);
 
     public List<ProductoventasPojo> findProductosStock();
 
