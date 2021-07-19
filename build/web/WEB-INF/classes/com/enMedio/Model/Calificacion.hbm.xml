@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 18/07/2021 09:58:53 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="com.enMedio.Model.Calificacion" table="calificacion" catalog="pruebaenmedio" optimistic-lock="version">
+        <id name="id" type="int">
+            <column name="id" />
+            <generator class="assigned" />
+        </id>
+        <many-to-one name="clientes" class="com.enMedio.Model.Clientes" fetch="select">
+            <column name="clientes_id" not-null="true" />
+        </many-to-one>
+        <many-to-one name="productos" class="com.enMedio.Model.Productos" fetch="select">
+            <column name="productos_id" not-null="true" />
+        </many-to-one>
+        <property name="calificacion" type="int">
+            <column name="calificacion" not-null="true" />
+        </property>
+        <property name="observacion" type="string">
+            <column name="observacion" length="100" />
+        </property>
+    </class>
+</hibernate-mapping>

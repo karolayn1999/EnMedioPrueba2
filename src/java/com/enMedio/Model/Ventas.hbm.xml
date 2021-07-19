@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 18/07/2021 09:58:53 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="com.enMedio.Model.Ventas" table="ventas" catalog="pruebaenmedio" optimistic-lock="version">
+        <id name="id" type="java.lang.Integer">
+            <column name="id" />
+            <generator class="identity" />
+        </id>
+        <many-to-one name="clientes" class="com.enMedio.Model.Clientes" fetch="select">
+            <column name="clientes_id" not-null="true" />
+        </many-to-one>
+        <property name="fecha" type="date">
+            <column name="fecha" length="10" />
+        </property>
+        <property name="monto" type="java.lang.Long">
+            <column name="monto" precision="11" scale="0" />
+        </property>
+        <property name="iva" type="java.lang.Long">
+            <column name="iva" precision="11" scale="0" />
+        </property>
+        <property name="descuento" type="java.lang.Long">
+            <column name="descuento" precision="11" scale="0" />
+        </property>
+        <property name="fechaEntrega" type="date">
+            <column name="fechaEntrega" length="10" />
+        </property>
+        <set name="productoventases" table="productoventas" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="ventas_id" not-null="true" />
+            </key>
+            <one-to-many class="com.enMedio.Model.Productoventas" />
+        </set>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 18/07/2021 09:58:53 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="com.enMedio.Model.Productos" table="productos" catalog="pruebaenmedio" optimistic-lock="version">
+        <id name="id" type="int">
+            <column name="id" />
+            <generator class="assigned" />
+        </id>
+        <property name="nombre" type="string">
+            <column name="nombre" length="100" not-null="true" />
+        </property>
+        <property name="precioVenta" type="double">
+            <column name="precioVenta" precision="22" scale="0" not-null="true" />
+        </property>
+        <property name="precioCompra" type="double">
+            <column name="precioCompra" precision="22" scale="0" not-null="true" />
+        </property>
+        <property name="descripcion" type="string">
+            <column name="Descripcion" length="45" />
+        </property>
+        <set name="productoventases" table="productoventas" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="productos_id" not-null="true" />
+            </key>
+            <one-to-many class="com.enMedio.Model.Productoventas" />
+        </set>
+        <set name="calificacions" table="calificacion" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="productos_id" not-null="true" />
+            </key>
+            <one-to-many class="com.enMedio.Model.Calificacion" />
+        </set>
+        <set name="comprases" table="compras" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="productos_id" not-null="true" />
+            </key>
+            <one-to-many class="com.enMedio.Model.Compras" />
+        </set>
+    </class>
+</hibernate-mapping>
